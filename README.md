@@ -6,6 +6,7 @@ Authenticated REST Django API for [Builds Frontend](https://github.com/t0ri/buil
 ## Users
 ### Sign Up
 `POST /users/signup`
+
 Expects key-value pairs
 ```
 email:example@email.com
@@ -15,6 +16,7 @@ password:mypassword
 
 ### Sign In
 `POST /users/signin`
+
 Expects key-value pairs
 ```
 username:myusername
