@@ -29,26 +29,35 @@ password:mypassword
 ## Lots
 ### Get all lots belonging to user
 `GET api/lots/user/<int:id>`
+
 Expects User ID in URL
+
 TODO: Get all lots belonging to User ID
 
 ### Get a lot
 `GET api/lots/<int:id>`
+
 Expects Lot ID in URL
+
 TODO: Get the lot belonging to Lot ID
 
 ### Update existing build
 `PUT api/lots/<int:id>/edit`
+
 Expects Lot ID in URL, data from request object, user to be Lot author from request
+
 TODO: Update a lot, given its ID and request data after validation if the request's user is the Lot author
 
 ### Delete existing lot
 `DELETE api/lots/<id>/delete`
+
 Expects Lot ID in URL, user to be Lot author from request
+
 TODO: Delete the lot belonging to Lot ID if the request's user is the Lot author
 
 ### Post a new build
 `POST api/lots/new`
+
 Expects JSON, user ID
 ```
 {
