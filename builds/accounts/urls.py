@@ -4,8 +4,8 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    # # ex: api/users/signup
+    # ex: api/users/signup
     path('signup', views.sign_up, name='sign-up'),
-    # # ex: api/users/signin/
+    # ex: api/users/signin/
     path('signin', views.sign_in, name='sign-in'),
 ]

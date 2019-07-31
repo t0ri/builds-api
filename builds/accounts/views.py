@@ -5,9 +5,6 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework import status
-
-# Code from https://github.com/ShubhamBansal1997/token-authentication-django/blob/master/myproject/myproject/views.py
-
 from rest_framework.views import APIView
 from accounts.serializers import UserSerializer
 from django.contrib.auth.models import User
@@ -29,10 +26,14 @@ def sign_up(request, format='json'):
 
 
 
+# Code from https://github.com/ShubhamBansal1997/token-authentication-django/blob/master/myproject/myproject/views.py
 @csrf_exempt
 @api_view(["POST"])
 @permission_classes((AllowAny,))
 def sign_in(request):
+    """
+    Returns token if user exists.
+    """
     username = request.data.get("username")
     password = request.data.get("password")
     if username is None or password is None:
