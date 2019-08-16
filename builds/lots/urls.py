@@ -5,8 +5,8 @@ from . import views
 
 urlpatterns = [
     # Get all lots belonging to user
-    # ex: api/lots/
-    path('', views.get_lots, name='get-lots'),
+    # ex: api/lots/user/<username>
+    path('user/<str:username>', views.get_lots, name='get-lots'),
 
     # Get a lot given an id
     # ex: api/lots/<id>

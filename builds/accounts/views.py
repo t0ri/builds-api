@@ -44,5 +44,5 @@ def sign_in(request):
         return Response({'error': 'Invalid Credentials'},
                         status=status.HTTP_404_NOT_FOUND)
     token, _ = Token.objects.get_or_create(user=user)
-    return Response({'token': token.key},
+    return Response({'token': token.key, 'user': user.id},
                     status=status.HTTP_200_OK)

@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Lot(models.Model):
-    title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     description = models.CharField(max_length=1000, blank=True)
     gallery = models.CharField(max_length=1000, blank=True)
     
@@ -11,9 +11,7 @@ class Lot(models.Model):
     bathrooms = models.CharField(max_length=3, blank=True)
     sims = models.CharField(max_length=3, blank=True)
 
-    packs = models.CharField(max_length=1000, blank=True)
-
-    # image = models.ImageField(default='default.jpg', upload_to='build-pics')
+    images = models.TextField(default='undefined')
 
     author = models.ForeignKey(
         User,
