@@ -1,7 +1,5 @@
 # builds-api
-
-Authenticated REST Django API for [Builds Frontend](https://github.com/t0ri/builds)
-
+Authenticated Django REST Framework API for [Builds Frontend](https://github.com/t0ri/builds)
 
 ## Using the API
 ### Accounts
